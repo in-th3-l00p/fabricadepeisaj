@@ -54,6 +54,10 @@
     </section>
 
     <section>
-        <img src="/images/home_footer.webp" alt="home_footer" class="w-full h-64 object-cover brightness-75">
+        <img
+            src="/images/home_footer.webp"
+            alt="home_footer"
+            class="w-full h-64 object-cover brightness-75"
+        >
     </section>
 @endsection

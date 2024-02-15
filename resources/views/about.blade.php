@@ -18,7 +18,7 @@
 
         <video
             src="/videos/video.mp4"
-            class="max-w-[800px] mx-auto"
+            class="max-w-[800px] w-full mx-auto"
             autoplay
         ></video>
 
