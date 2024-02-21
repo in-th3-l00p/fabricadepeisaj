@@ -1,6 +1,6 @@
 <div @class([
                 "flex justify-between p-7 border-2 border-green-700 rounded-md mb-7",
-                "hover:bg-green-700 hover:text-white hover:cursor-pointer transition-colors"
+                "hover:bg-green hover:text-white hover:cursor-pointer transition-colors"
             ])>
     <div>
         <h2 class="text-xl">{{ $title }}</h2>

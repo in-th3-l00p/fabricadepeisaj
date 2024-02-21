@@ -7,3 +7,5 @@ Route::get('/', function () {
 })->name("home");
 
 Route::view("/despre-noi", "about")->name("about");
+Route::view("/inspiratie", "inspiration")->name("inspiration");
+
