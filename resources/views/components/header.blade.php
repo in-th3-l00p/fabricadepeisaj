@@ -19,7 +19,7 @@
             {{ __("Noutăți") }}
         </x-header-link>
 
-        <x-header-link :route="route('home')">
+        <x-header-link :route="route('contact')">
             {{ __("Contact") }}
         </x-header-link>
     </nav>

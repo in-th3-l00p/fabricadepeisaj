@@ -23,15 +23,15 @@
         ></video>
 
         <div class="hidden absolute top-0 left-0 xl:flex flex-col w-[400px] -rotate-[30deg] -translate-x-16 -translate-y-16 -z-10 gap-4">
-            <div class="bg-green-700 h-8"></div>
-            <div class="bg-green-700 h-4"></div>
-            <div class="bg-green-700 h-4"></div>
+            <div class="bg-green h-8"></div>
+            <div class="bg-green h-4"></div>
+            <div class="bg-green h-4"></div>
         </div>
 
         <div class="hidden absolute bottom-0 right-0 xl:flex flex-col w-[400px] -rotate-[30deg] translate-x-16 translate-y-16 -z-10 gap-4">
-            <div class="bg-green-700 h-8"></div>
-            <div class="bg-green-700 h-4"></div>
-            <div class="bg-green-700 h-4"></div>
+            <div class="bg-green h-8"></div>
+            <div class="bg-green h-4"></div>
+            <div class="bg-green h-4"></div>
         </div>
     </section>
 @endsection
