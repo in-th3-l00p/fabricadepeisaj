@@ -25,12 +25,18 @@
         <div class="bg-white p-8 rounded-md shadow-md">
             <h2 class="text-2xl mb-8">{{ __("Ultimele știri") }}</h2>
             @forelse($articles as $article)
-                <x-home.news-display
-                    id={{ $article->id }}
-                    title="{{ $article->title }}"
-                    description="{{ substr($article->content, 0, 20) }}"
-                    :createdAt="Date::now()"
-                />
+                <a
+                    href="{{ route("news.show", [ "noutati" => $article ]) }}"
+                    @class([
+                        "p-8 bg-white border-2 rounded-lg flex flex-wrap justify-between shadow-xl mb-8",
+                        "hover:bg-green hover:text-white hover:shadow-2xl hover:scale-105 transition-all"
+                    ])
+                >
+                    <h2 class="text-xl font-semibold max-w-[60%]">{{ $article->title }}</h2>
+                    <span>
+                        <p>{{ __("Publicat pe data de: ") . $article->created_at }}</p>
+                    </span>
+                </a>
            @empty
                 <p class="py-8 text-center">{{ __("Nu a fost publicată nicio știre") }}</p>
             @endforelse

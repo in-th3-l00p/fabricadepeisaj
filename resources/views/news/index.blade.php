@@ -14,7 +14,7 @@
                     "hover:bg-green hover:text-white hover:shadow-xl hover:scale-105 transition-all"
                 ])
             >
-                <h2 class="text-xl font-semibold">{{ $article->title }}</h2>
+                <h2 class="text-xl font-semibold max-w-[60%]">{{ $article->title }}</h2>
                 <span>
                     <p>{{ __("Publicat pe data de: ") . $article->created_at }}</p>
                 </span>

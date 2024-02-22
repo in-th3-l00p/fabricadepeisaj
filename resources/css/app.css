@@ -11,3 +11,11 @@
 .social-button:hover > img {
     @apply invert;
 }
+
+.post-href {
+    @apply font-bold;
+    @apply text-gray-800;
+    @apply hover:text-gray-600;
+    @apply hover:underline;
+    @apply transition-all;
+}
