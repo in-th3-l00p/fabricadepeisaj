@@ -26,7 +26,7 @@
             {{ __("Inspirație") }}
         </x-header-link>
 
-        <x-header-link :route="route('home')">
+        <x-header-link :route="route('news.index')">
             {{ __("Noutăți") }}
         </x-header-link>
 
@@ -44,7 +44,7 @@
             {{ __("Inspirație") }}
         </x-responsive-header-link>
 
-        <x-responsive-header-link :route="route('home')">
+        <x-responsive-header-link :route="route('news.index')">
             {{ __("Noutăți") }}
         </x-responsive-header-link>
 

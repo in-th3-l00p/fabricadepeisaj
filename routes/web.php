@@ -1,11 +1,16 @@
 <?php
 
+use App\Http\Controllers\NewsArticleController;
 use App\Models\ContactSubmission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "articles" => \App\Models\NewsArticle::query()
+            ->latest()
+            ->paginate(3)
+    ]);
 })->name("home");
 
 Route::view("/despre-noi", "about")->name("about");
@@ -34,5 +39,7 @@ Route::post("/contact", function (Request $request) {
     return redirect()->route("contact")
         ->with("success", "Multumim pentru mesaj! O sa revenim in cel mai scurt timp posibil!");
 })->name("contact.submit");
-
+Route::resource("noutati", NewsArticleController::class)
+    ->only(["index", "show"])
+    ->names("news");
 

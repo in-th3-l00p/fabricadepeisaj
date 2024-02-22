@@ -24,23 +24,16 @@
     <section class="px-8 md:px-16 xl:px-64 py-16 grid grid-cols-1 md:grid-cols-2 gap-16">
         <div class="bg-white p-8 rounded-md shadow-md">
             <h2 class="text-2xl mb-8">{{ __("Ultimele știri") }}</h2>
-            <x-home.news-display
-                title="lorem ipsum"
-                description="lorem ipsum"
-                :createdAt="Date::now()"
-            />
-
-            <x-home.news-display
-                title="lorem ipsum"
-                description="lorem ipsum"
-                :createdAt="Date::now()"
-            />
-
-            <x-home.news-display
-                title="lorem ipsum"
-                description="lorem ipsum"
-                :createdAt="Date::now()"
-            />
+            @forelse($articles as $article)
+                <x-home.news-display
+                    id={{ $article->id }}
+                    title="{{ $article->title }}"
+                    description="{{ substr($article->content, 0, 20) }}"
+                    :createdAt="Date::now()"
+                />
+           @empty
+                <p class="py-8 text-center">{{ __("Nu a fost publicată nicio știre") }}</p>
+            @endforelse
         </div>
 
         <div class="bg-white p-8 rounded-md shadow-md flex flex-col justify-between self-start">
