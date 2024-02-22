@@ -41,7 +41,7 @@
                 </ul>
             </div>
 
-            <p class="mb-8">{{ __("inspiration.edition2.video") }}</p>
+            <p class="mb-8">{{ __("inspiration.edition_2.video") }}</p>
 
             <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <iframe src="https://www.youtube.com/embed/Y1-e61gX4uM" class="w-full aspect-video"></iframe>
