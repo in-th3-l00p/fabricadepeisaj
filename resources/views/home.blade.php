@@ -5,7 +5,7 @@
     <section @class([
         "bg-cyan px-8 md:px-16 xl:px-64 py-8 md:py-48 mb-8 text-white",
         "flex flex-col gap-8 justify-center items-center",
-        "md:flex-row md:justify-between relative"
+        "md:flex-row md:justify-between relative z-10"
     ])>
         <div class="md:absolute z-10">
             <p class="text-2xl md:text-4xl md:max-w-[400px] xl:max-w-[75%] mb-4">Fabrica de Peisaj este primul centru de

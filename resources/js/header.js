@@ -2,10 +2,14 @@ const toggler = document.querySelector("#responsive-nav-toggler");
 const nav = document.querySelector("#responsive-nav");
 
 function toggleNav() {
-    if (nav.style.display === "none")
+    if (nav.style.display === "none") {
         nav.style.display = "flex";
-    else {
+        nav.parentNode.classList.toggle("z-10");
+        nav.parentNode.classList.toggle("z-20");
+    } else {
         nav.style.display = "none";
+        nav.parentNode.classList.toggle("z-10");
+        nav.parentNode.classList.toggle("z-20");
     }
 }
 

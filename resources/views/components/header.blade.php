@@ -1,5 +1,5 @@
 <header
-    class="py-10 px-8 sm:px-16 xl:px-60 flex flex-col xl:flex-row xl:justify-between items-center bg-white relative z-50"
+    class="py-10 px-8 sm:px-16 xl:px-60 flex flex-col xl:flex-row xl:justify-between items-center bg-white relative z-10"
 >
     <div class="flex justify-between w-full xl:max-w-fit">
         <a
@@ -41,7 +41,7 @@
 
     <nav style="display: none;" @class([
         "xl:hidden",
-        "absolute bottom-0 left-0 translate-y-full",
+        "absolute z-50 bottom-0 left-0 translate-y-full",
         "bg-white w-full flex-col py-4 responsive-navbar"
     ]) id="responsive-nav">
         <x-responsive-header-link :route="route('about')">
