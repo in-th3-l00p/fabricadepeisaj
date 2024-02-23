@@ -131,20 +131,24 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                     @foreach ([
-                        "DFG05510.JPG",
-                        "DFG05542.JPG",
-                        "DFG05604.JPG",
-                        "DFG05631.JPG",
-                        "DFG05662.JPG",
-                        "DFG05686.JPG",
-                        "DFG05696.JPG",
-                        "DFG05738.JPG",
-                        "DFG05790.JPG",
-                        "DFG05921.JPG",
-                        "DFG05929.JPG",
-                        "DFG06150.JPG"
+                        "DFG05510.jpg",
+                        "DFG05542.jpg",
+                        "DFG05604.jpg",
+                        "DFG05631.jpg",
+                        "DFG05662.jpg",
+                        "DFG05686.jpg",
+                        "DFG05696.jpg",
+                        "DFG05738.jpg",
+                        "DFG05790.jpg",
+                        "DFG05921.jpg",
+                        "DFG05929.jpg",
+                        "DFG06150.jpg"
                     ] as $src)
-                        <img src="{{ "/static/inspiratie/ikea-grid/" . $src }}" alt="ikea grid">
+                        <img
+                            src="{{ "/static/inspiratie/ikea-grid/" . $src }}"
+                            alt="ikea grid"
+                            loading="lazy"
+                        >
                     @endforeach
                 </div>
             </div>
