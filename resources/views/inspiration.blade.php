@@ -1,7 +1,7 @@
 @extends("layouts.main-layout")
 
 @section("content")
-    <div class="px-8 md:px-16 xl:px-64 py-8 relative overflow-hidden">
+    <x-container>
         <div class="pb-4 mb-4 border-b">
             <h1 class="text-4xl">{{ __("Inspirație") }}</h1>
         </div>
@@ -174,5 +174,5 @@
                 </section>
             </div>
         </x-inspiration.edition-container>
-    </div>
+    </x-container>
 @endsection

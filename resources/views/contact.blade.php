@@ -1,7 +1,7 @@
 @extends("layouts.main-layout")
 
 @section("content")
-    <section class="px-8 md:px-16 xl:px-64 py-16">
+    <x-container>
         <div class="bg-white p-8 rounded-lg shadow-lg mb-16">
             <h2 class="text-2xl mb-8">{{ __("Contact") }}</h2>
 
@@ -46,10 +46,7 @@
                     <p class="text-red-600">{{ $message }}</p>
                 @enderror
 
-                <button
-                    type="submit"
-                    class="bg-green hover:bg-cyan shadow-md hover:shadow-xl transition-all text-white p-4 rounded-lg mx-auto"
-                >
+                <button type="submit" class="btn">
                     {{ __("Trimite") }}
                 </button>
             </form>
@@ -59,5 +56,5 @@
             <h2 class="text-2xl mb-8">{{ __("Adresă") }}</h2>
             <p>{{ __("Centru de pregătire Liceului Tehnologic ”Cezar Nicolau”: Bulevardul I. C. Brătianu nr. 1B, Brănești, Județul Ilfov") }}</p>
         </div>
-    </section>
+    </x-container>
 @endsection

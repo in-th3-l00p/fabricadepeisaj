@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\NewsArticleController;
+use App\Jobs\SendContactSubmissionMail;
+use App\Mail\ContactSubmissionMail;
 use App\Models\ContactSubmission;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,6 +18,7 @@ Route::get('/', function () {
 })->name("home");
 
 Route::view("/despre-noi", "about")->name("about");
+Route::view("/parteneri", "partners")->name("partners");
 Route::view("/inspiratie", "inspiration")->name("inspiration");
 Route::view("/contact", "contact")->name("contact");
 Route::post("/contact", function (Request $request) {
@@ -34,11 +39,14 @@ Route::post("/contact", function (Request $request) {
         "message.max" => "Mesajul trebuie sa aiba maxim 3000 caractere"
     ]);
 
-    ContactSubmission::create($data);
+    $submission = ContactSubmission::create($data);
+    Log::info("Contact submission received: " . $submission->id);
+    SendContactSubmissionMail::dispatch($submission);
 
     return redirect()->route("contact")
         ->with("success", "Multumim pentru mesaj! O sa revenim in cel mai scurt timp posibil!");
 })->name("contact.submit");
+
 Route::resource("noutati", NewsArticleController::class)
     ->only(["index", "show"])
     ->names("news");

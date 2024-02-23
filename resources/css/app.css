@@ -19,3 +19,10 @@
     @apply hover:underline;
     @apply transition-all;
 }
+
+.btn {
+    @apply
+    bg-green hover:bg-cyan shadow-md
+    text-white p-4 rounded-lg mx-auto
+    hover:shadow-xl transition-all;
+}

@@ -1,0 +1,10 @@
+@keyframes responsive-navbar-appear {
+    from { transform: translateY(0%); }
+    to { transform: translateY(100%); }
+}
+
+.responsive-navbar {
+    animation: responsive-navbar-appear 0.3s ease-in-out;
+    transform: translateY(100%);
+    z-index: -20;
+}

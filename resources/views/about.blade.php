@@ -1,7 +1,7 @@
 @extends("layouts.main-layout")
 
 @section("content")
-    <section class="px-8 md:px-16 xl:px-64 py-8 relative overflow-hidden">
+    <x-container>
         <div class="pb-4 mb-4 border-b">
             <h1 class="text-4xl">{{ __("Despre noi") }}</h1>
         </div>
@@ -33,5 +33,5 @@
             <div class="bg-green h-4"></div>
             <div class="bg-green h-4"></div>
         </div>
-    </section>
+    </x-container>
 @endsection

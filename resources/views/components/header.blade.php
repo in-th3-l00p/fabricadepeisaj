@@ -1,5 +1,5 @@
 <header
-    class="py-10 px-8 sm:px-16 xl:px-60 flex flex-col xl:flex-row xl:justify-between items-center bg-white"
+    class="py-10 px-8 sm:px-16 xl:px-60 flex flex-col xl:flex-row xl:justify-between items-center bg-white relative z-50"
 >
     <div class="flex justify-between w-full xl:max-w-fit">
         <a
@@ -17,9 +17,13 @@
         </button>
     </div>
 
-    <nav class="hidden xl:flex gap-4 md:gap-8">
+    <nav class="hidden xl:flex gap-4">
         <x-header-link :route="route('about')">
             {{ __("Despre noi") }}
+        </x-header-link>
+
+        <x-header-link :route="route('partners')">
+            {{ __("Parteneri") }}
         </x-header-link>
 
         <x-header-link :route="route('inspiration')">
@@ -35,9 +39,17 @@
         </x-header-link>
     </nav>
 
-    <nav class="xl:hidden hidden flex flex-col mt-8" id="responsive-nav">
+    <nav style="display: none;" @class([
+        "xl:hidden",
+        "absolute bottom-0 left-0 translate-y-full",
+        "bg-white w-full flex-col mt-8 responsive-navbar"
+    ]) id="responsive-nav">
         <x-responsive-header-link :route="route('about')">
             {{ __("Despre noi") }}
+        </x-responsive-header-link>
+
+        <x-responsive-header-link :route="route('partners')">
+            {{ __("Parteneri") }}
         </x-responsive-header-link>
 
         <x-responsive-header-link :route="route('inspiration')">
@@ -52,5 +64,7 @@
             {{ __("Contact") }}
         </x-responsive-header-link>
     </nav>
+
+    <div class="bg-white absolute top-0 left-0 w-full h-full -z-10"></div>
 </header>
-@vite("resources/js/header.js")
+@vite(["resources/js/header.js", "resources/css/header.css"])
