@@ -1,11 +1,11 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-BOLXwvFr.css",
+    "file": "assets/app-C_eborJj.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/header.css": {
-    "file": "assets/header-P6I6Ge7N.css",
+    "file": "assets/header-u9X2Lt4L.css",
     "src": "resources/css/header.css",
     "isEntry": true
   },
@@ -15,7 +15,7 @@
     "isEntry": true
   },
   "resources/js/header.js": {
-    "file": "assets/header-DK0MGj9H.js",
+    "file": "assets/header-fCQ1aGom.js",
     "src": "resources/js/header.js",
     "isEntry": true
   }

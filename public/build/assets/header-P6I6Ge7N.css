@@ -1,1 +1,0 @@
-@keyframes responsive-navbar-appear{0%{transform:translateY(0)}to{transform:translateY(100%)}}.responsive-navbar{animation:responsive-navbar-appear .3s ease-in-out;transform:translateY(100%);z-index:-20}
