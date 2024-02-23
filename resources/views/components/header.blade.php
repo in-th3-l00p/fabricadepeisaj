@@ -42,7 +42,7 @@
     <nav style="display: none;" @class([
         "xl:hidden",
         "absolute bottom-0 left-0 translate-y-full",
-        "bg-white w-full flex-col mt-8 responsive-navbar"
+        "bg-white w-full flex-col py-4 responsive-navbar"
     ]) id="responsive-nav">
         <x-responsive-header-link :route="route('about')">
             {{ __("Despre noi") }}
